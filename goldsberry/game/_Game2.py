@@ -138,7 +138,7 @@ class GameIDs(NbaDataProvider):
         NbaDataProvider.__init__(self, url_modifier=url_modifier, default_params=p_game_ids)
 
     def game_list(self):
-        return self.object_manager.get_table_from_data(self.object_manager.data_tables, 0)
+        return self.object_manager._get_table_from_data(self.object_manager.data_tables, 0)
 
 
 __all__ = ['play_by_play', 'boxscore_summary', 'boxscore_traditional',
